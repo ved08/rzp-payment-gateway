@@ -30,7 +30,7 @@ router.post("/orders", (req, res) => {
 
 router.post("/verify", (req, res) => {
     console.log("Starting payment verification process")
-    body = req.body.razorpayOrderId + "|" + req.body.razorpayPaymentId;
+    let body = req.body.razorpayOrderId + "|" + req.body.razorpayPaymentId;
     let expectedSignature = crypto
     .createHmac("sha256", process.env.RZP_KEY)
     .update(body.toString())
