@@ -6,10 +6,7 @@ const paymentRoutes = require("./routes/payments")
 app.use(express.json())
 app.use(cors())
 
-// app.use("/payment", paymentRoutes)
-app.get('/', (req, res) => {
-    res.send("Server working")
-})
+app.use("/payment", paymentRoutes)
 
 app.listen(process.env.PORT || 5000, () => {
     console.log(`Process runnning in port ${process.env.PORT || 5000}`)
