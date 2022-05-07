@@ -41,6 +41,9 @@ router.post("/verify", (req, res) => {
     }
     res.send(response)
 })
+router.get("/", (req, res) => {
+    res.send("Backend server of SOD 2022. Developed by Ved")
+})
 module.exports = router
 
 
