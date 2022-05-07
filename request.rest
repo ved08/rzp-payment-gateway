@@ -1,0 +1,1 @@
+GET https://rzp-payment-gateway.vercel.app/ HTTP/1.1
