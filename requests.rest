@@ -4,15 +4,18 @@ Content-Type: application/json
 {
     "model": 2,
     "data": {
-        "uid":"123346",
-        "name":"Vedvardhan",
+        "uid":"123346222",
+        "name":"dhejes",
         "email":"ved@gmail.com",
-        "photoURL":"https://be.com"
+        "photoURL":"https://be.com",
+        "phone": 9100385601
     }
 }
+###
+GET https://rzp-payment-gateway.vercel.app/payment HTTP/1.1
 
 ###
-POST http://localhost:5000/db/get-from-db HTTP/1.1
+POST https://rzp-payment-gateway.vercel.app/db/get-from-db HTTP/1.1
 Content-Type: application/json
 
 {
