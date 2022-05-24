@@ -6,8 +6,8 @@ const router = express.Router()
 const { addDataToDatabase, getItemFromDatabase } = require("../databaseHelpers")
 
 router.post("/add-to-db", (req, res) => {
-    addDataToDatabase(req.body.model, req.body.data)
-    res.end()
+    addDataToDatabase(req.body.model, req.body.data, res)
+    console.log(req.body.data)
 })
 router.post("/get-from-db", (req, res) => {
     getItemFromDatabase(req.body.model, req.body.filterData)

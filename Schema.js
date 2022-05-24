@@ -6,15 +6,11 @@ const userSubmissions = new Schema({
         type: String,
         required: true
     },
-    assignmentName: {
-        type: String,
-        required: true
-    },
     assignmentSlug: {
         type: String,
         required: true
     },
-    files: {
+    fileData: {
         type: Object,
         required: true
     }

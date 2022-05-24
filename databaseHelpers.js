@@ -7,17 +7,17 @@ const checkStudentRegistrationStatus = (uid) => {
     })
 }
 
-const addDataToDatabase = (model, data) => {
+const addDataToDatabase = (model, data, res) => {
     switch (model) {
         case 1:
             new userSubmissionsModel(data).save()
-            .then(() => console.log("Data Saved"))
-            .catch(err => console.log(err))
+            .then(() => res.status(200).send("saved"))
+            .catch(err => res.status(500).send())
             break
         case 2:
             new usersModel(data).save()
-            .then(() => console.log("Data Saved"))
-            .catch(err => console.log(err))
+            .then(() =>  res.status(200).send("saved"))
+            .catch(err => res.status(500).send())
             break
         default:
             console.log("Invalid request")
